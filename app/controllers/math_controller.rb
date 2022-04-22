@@ -17,7 +17,7 @@ class MathController < ApplicationController
   def subtract_result
     @number1 = params.fetch("number1").to_f
     @number2 = params.fetch("number2").to_f
-    @dif = @number1-@number2
+    @dif = @number2-@number1
     render({ :template => "calc_templates/subtract_result.html.erb".html_safe }) 
   end
 
@@ -27,8 +27,8 @@ class MathController < ApplicationController
   def multiply_result
     @number1 = params.fetch("number1").to_f
     @number2 = params.fetch("number2").to_f
-    @sum = @number1+@number2   
-    render({ :template => "calc_templates/multiply_result.html.erb".html_safe }) 
+    @product = @number1*@number2   
+    render({ :template => "calc_templates/multiply_results.html.erb".html_safe }) 
   end
 
   def divide_page
